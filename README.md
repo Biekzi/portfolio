@@ -21,6 +21,7 @@ assets/js/main.js       导航、滚动动效、灯箱图库
 assets/img/weapons/     武器项目网页图（2000px 宽）
 assets/img/characters/  角色项目网页图
 assets/img/og-cover.jpg 社交分享封面
+assets/img/qr-code.png  网站二维码（指向线上作品集）
 favicon.svg             站点图标
 ```
 
@@ -29,7 +30,7 @@ favicon.svg             站点图标
 - **文案**：直接编辑 `index.html` 中的项目标题、介绍与图片说明。
 - **配色 / 字体 / 间距**：编辑 `assets/css/style.css` 顶部的 `:root` 变量。
 - **换图**：替换 `assets/img/` 下同名文件，保持宽高比即可。
-- **邮箱 / 社交链接**：搜索 `https://github.com/USERNAME` 替换为你的实际链接；如需展示邮箱，在联系区添加 `mailto:` 按钮。
+- **联系方式**：联系区已包含邮箱 `high13427212003@163.com` 与网站二维码；GitHub 链接为 `https://github.com/Biekzi`。二维码图片为 `assets/img/qr-code.png`，站点地址变更后可重新生成。
 
 ## 部署
 

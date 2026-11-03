@@ -1272,18 +1272,97 @@ section[id] {
   -webkit-text-stroke: 1.5px rgba(10, 11, 13, 0.55);
 }
 
+.contact__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(36px, 7vw, 110px);
+  align-items: end;
+  margin-top: clamp(24px, 3.5vw, 44px);
+}
+
+.contact__copy {
+  min-width: 0;
+}
+
 .contact__cn {
   max-width: 36em;
-  margin-top: clamp(24px, 3vw, 36px);
+  margin-top: 0;
   font-size: clamp(0.95rem, 1.4vw, 1.2rem);
   line-height: 1.8;
+}
+
+.contact__email {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-top: clamp(20px, 2.6vw, 30px);
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(10, 11, 13, 0.35);
+  color: #0a0b0d;
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  word-break: break-all;
+  transition: border-color 0.3s ease;
+}
+
+.contact__email:hover {
+  border-color: #0a0b0d;
+}
+
+.contact__email-label {
+  color: rgba(10, 11, 13, 0.55);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
 }
 
 .contact__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: clamp(28px, 4vw, 46px);
+  margin-top: clamp(24px, 3vw, 36px);
+}
+
+.contact__qr {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.qr-frame {
+  width: clamp(150px, 13vw, 196px);
+  padding: 10px;
+  background: #f5f4ee;
+  border: 1px solid rgba(10, 11, 13, 0.18);
+  border-radius: 3px;
+  box-shadow: 0 24px 60px rgba(10, 11, 13, 0.16);
+}
+
+.qr-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact__qr-label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  color: #0a0b0d;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact__qr-label span {
+  color: rgba(10, 11, 13, 0.55);
 }
 
 .contact__footer {
@@ -1748,6 +1827,27 @@ section[id] {
     font-size: clamp(2.5rem, 13.2vw, 6rem);
   }
 
+  .contact__body {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 30px;
+  }
+
+  .contact__qr {
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .qr-frame {
+    width: 132px;
+  }
+
+  .contact__qr-label {
+    max-width: 160px;
+    line-height: 1.7;
+  }
+
   .contact__footer {
     flex-direction: column;
     gap: 6px;
@@ -1818,6 +1918,11 @@ section[id] {
 
   .lightbox__hint {
     display: none;
+  }
+
+  .contact__email {
+    gap: 4px 10px;
+    font-size: 0.95rem;
   }
 }
 
